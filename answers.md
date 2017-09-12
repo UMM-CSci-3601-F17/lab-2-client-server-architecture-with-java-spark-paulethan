@@ -38,4 +38,3 @@
   ```html
   <script type="text/javascript" src="javascript/users.js"> </script>
   ```
-  - 
