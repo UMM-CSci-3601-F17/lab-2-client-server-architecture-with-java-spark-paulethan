@@ -24,9 +24,22 @@ Todos
 
 Owner: <input id="owner" type= "text" name="owner"><br>
 Category: <input id="category" type= "text" name="category"><br>
-Status: <input id="status" type= "text" name="status"><br>
+Status:
+<select id="status">
+  <option value=""></option>
+  <option value="complete">Complete</option>
+  <option value="incomplete">Incomplete</option>
+</select>
+<br>
 Contains: <input id="contains" type= "text" name="contains"><br>
-Order by:  <input id="orderBy" type= "text" name="orderBy"><br>
+Order by:
+<select id="orderBy">
+  <option value=""></option>
+  <option value="owner">Owner</option>
+  <option value="category">Category</option>
+  <option value="body">Body</option>
+  <option value="status">Status</option>
+</select><br>
 Limit: <input id="limit" type= "text" name="limit"><br>
 
 <button type="button" id="getFilteredTodos"> Get Todos </button>
