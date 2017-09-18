@@ -7,9 +7,6 @@ import java.util.HashMap;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Tests umm3601.user.Database listUser functionality
- */
 public class FullTodoListFromDB {
 
     @Test
@@ -20,7 +17,7 @@ public class FullTodoListFromDB {
     }
 
     @Test
-    public void firstUserInFullList() throws IOException {
+    public void firstTodoInFullList() throws IOException {
       Database db = new Database("src/main/data/todos.json");
       Todo[] allTodos = db.listTodos(new HashMap<>());
       Todo firstTodo = allTodos[0];

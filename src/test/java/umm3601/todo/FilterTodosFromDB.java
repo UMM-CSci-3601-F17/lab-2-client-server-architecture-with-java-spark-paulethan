@@ -28,14 +28,14 @@ public class FilterTodosFromDB {
 
   @Test
   public void listTodosWitStatusFilter() {
-    queryParams.put("status", new String[] {"true"});
+    queryParams.put("status", new String[] {"complete"});
     Todo[] filteredTodos = db.listTodos(queryParams);
     assertEquals("Incorrect number of todos", 143, filteredTodos.length);
   }
 
   @Test
   public void listTodosWitStatusFilter2() {
-    queryParams.put("status", new String[] {"false"});
+    queryParams.put("status", new String[] {"incomplete"});
     Todo[] filteredTodos = db.listTodos(queryParams);
     assertEquals("Incorrect number of todos", 157, filteredTodos.length);
   }
@@ -71,7 +71,7 @@ public class FilterTodosFromDB {
   @Test
   public void listTodosWithTwoFilter() {
     queryParams.put("category", new String[] {"homework"});
-    queryParams.put("status", new String[] {"true"});
+    queryParams.put("status", new String[] {"complete"});
     Todo[] filteredTodos = db.listTodos(queryParams);
     assertEquals("Incorrect number of todos", 39, filteredTodos.length);
   }
