@@ -57,6 +57,9 @@ public class Database {
                      break;
       }
     }
+    if(queryParams.containsKey("limit")) {
+      filteredTodos = Arrays.stream(filteredTodos).limit(Integer.parseInt(queryParams.get("limit")[0])).toArray(Todo[]::new);
+    }
     return filteredTodos;
   }
 
