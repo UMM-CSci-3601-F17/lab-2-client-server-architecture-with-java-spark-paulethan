@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todos</title>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/sakura.css/css/sakura.css">
+  <script type="text/javascript" src="javascript/todos.js"> </script>
+  <style type="text/css" >
+    pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+    .string { color: green; }
+    .number { color: darkorange; }
+    .boolean { color: blue; }
+    .null { color: magenta; }
+    .key { color: red; }
+  </style>
+</head>
+<body>
+
+<a href="/">Home</a> |
+<a href="/about">About</a> |
+<a href="/users">Users</a> |
+Todos
+<hr>
+
+Owner: <input id="owner" type= "text" name="owner"><br>
+Category: <input id="category" type= "text" name="category"><br>
+Status: <input id="status" type= "text" name="status"><br>
+Contains: <input id="contains" type= "text" name="contains"><br>
+Order by:  <input id="orderBy" type= "text" name="orderBy"><br>
+Limit: <input id="limit" type= "text" name="limit"><br>
+
+<button type="button" id="getFilteredTodos"> Get Todos </button>
+
+<br><br>
+<pre id="jsonDump"> Json will go here </pre>
+
+<script>
+  window.onload = function() {
+    console.log("The page is loaded now!");
+
+    var element = document.getElementById('getFilteredTodos');
+    element.addEventListener("click", getFilteredTodos, true);
+  }
+</script>
+</body>
+</html>
