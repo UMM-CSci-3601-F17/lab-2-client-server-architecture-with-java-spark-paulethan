@@ -40,7 +40,7 @@ public class Database {
       filteredTodos = filterTodos(filteredTodos, x -> x.category.equalsIgnoreCase(queryParams.get("category")[0]));
     }
     if(queryParams.containsKey("status")) {
-      filteredTodos = filterTodos(filteredTodos, x -> x.status == (queryParams.get("status")[0].equalsIgnoreCase("true") ? true : false));
+      filteredTodos = filterTodos(filteredTodos, x -> x.status == (queryParams.get("status")[0].equalsIgnoreCase("complete") || queryParams.get("status")[0].equalsIgnoreCase("true") ? true : false));
     }
     if(queryParams.containsKey("contains")) {
       filteredTodos = filterTodos(filteredTodos, x -> x.body.contains(queryParams.get("contains")[0]));
